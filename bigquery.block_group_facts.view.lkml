@@ -1,5 +1,5 @@
 view: bq_block_group_facts {
-  sql_table_name: `looker-datablocks.acs_fast_facts.fast_facts` ;;
+  sql_table_name: `cr-sa-sandbox.demographics.fast_facts` ;;
 
   dimension: logrecno_bg_map_block_group {
     hidden: yes

@@ -5,7 +5,7 @@ view: bq_tract_zcta_map {
     sql:
       SELECT geoid, ZCTA5  FROM
       (select *,  ROW_NUMBER() OVER (PARTITION BY GEOID ORDER BY ZPOPPCT DESC) row_num
-      from `looker-datablocks.acs_fast_facts.zcta_to_tract_w_state`)
+      from `cr-sa-sandbox.demographics.zcta_to_tract_w_state`)
       WHERE row_num = 1;;
     persist_for: "10000 hours"
   }

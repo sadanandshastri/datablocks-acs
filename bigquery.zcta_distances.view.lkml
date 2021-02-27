@@ -3,7 +3,7 @@ view: bq_zcta_distances {
   derived_table: {
     sql: SELECT *
           FROM
-        `looker-datablocks.acs_fast_facts.zcta_distances_*`
+        `cr-sa-sandbox.demographics.zcta_distances_*`
         WHERE
           zip1 = {% parameter zcta_distances.zip1 %}
           AND _TABLE_SUFFIX = SUBSTR( {% parameter zcta_distances.zip1 %}, 0, 1)
